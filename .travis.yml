@@ -12,6 +12,7 @@ before_install:
  - sudo cp tests/assets/activemq /etc/default/activemq
  - cp tests/assets/jmx.* apache-activemq-5.7.0/conf/
  - cd apache-activemq-5.7.0
+ - sudo cp ../tests/assets/activemq.xml conf/activemq.xml
  - cd bin/
  - ./activemq start
  - cd ../../
