@@ -16,5 +16,8 @@
  *
  * Never commit passwords to the source code repository.
  */
-
+defined('TESTS_ZEND_QUEUE_ACTIVEMQ_ENABLED') || define('TESTS_ZEND_QUEUE_ACTIVEMQ_ENABLED', true);
+defined('TESTS_ZEND_QUEUE_ACTIVEMQ_SCHEME') || define('TESTS_ZEND_QUEUE_ACTIVEMQ_SCHEME', 'tcp');
+defined('TESTS_ZEND_QUEUE_ACTIVEMQ_HOST') || define('TESTS_ZEND_QUEUE_ACTIVEMQ_HOST', 'localhost');
+defined('TESTS_ZEND_QUEUE_ACTIVEMQ_PORT') || define('TESTS_ZEND_QUEUE_ACTIVEMQ_PORT', '61613');
 require_once __DIR__ . '/TestConfiguration.php.dist';

@@ -7,6 +7,13 @@ before_install:
  - cp tests/TestConfiguration.php.travis tests/TestConfiguration.php
  - composer install --dev
  - wget http://cs.sensiolabs.org/get/php-cs-fixer.phar
+ - wget http://apache.mirror.clusters.cc/activemq/apache-activemq/5.7.0/apache-activemq-5.7.0-bin.tar.gz 
+ - tar xvzf apache-activemq-5.7.0-bin.tar.gz
+ - sudo cp tests/assets/activemq /etc/default/activemq
+ - cp tests/assets/jmx.* apache-activemq-5.7.0/conf/
+ - cd apache-activemq-5.7.0
+ - cd bin/
+ - ./activemq start
 
 script:
  - phpunit -c ./tests/
